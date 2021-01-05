@@ -14,8 +14,8 @@ do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=lmi
-device.name2=lmipro
+device.name1=apollo
+device.name2=apollopro
 supported.versions=10
 '; } # end properties
 
