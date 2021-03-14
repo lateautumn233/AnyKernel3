@@ -32,9 +32,10 @@ patch_vbmeta_flag=auto;
 $bin/busybox fstrim -v /data;
 
 ## AnyKernel boot install
-dump_boot;
+split_boot;
 
-write_boot;
+flash_boot;
+flash_dtbo;
 ## end boot install
 
 # Vendor boot
