@@ -16,7 +16,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=apollo
 device.name2=apollopro
-supported.versions=10
+supported.versions=11
 '; } # end properties
 
 # shell variables
