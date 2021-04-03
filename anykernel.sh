@@ -39,9 +39,5 @@ dump_boot;
 
 mv $home/source/dtb $home/split_img/;
 
-# Clean up existing ramdisk overlays
-rm -rf $ramdisk/overlay;
-rm -rf $ramdisk/overlay.d;
-
 write_boot;
 ## end install
