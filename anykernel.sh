@@ -28,11 +28,11 @@ ramdisk_compression=auto;
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
-if [ ! -f $home/source/Image.gz ] || [ ! -f $home/source/dtb ]; then
+if [ ! -f $home/source/Image ] || [ ! -f $home/source/dtb ]; then
     ui_print " " "This zip is corrupted! Aborting..."; exit 1;
 fi
 
-mv $home/source/Image.gz $home/Image.gz;
+mv $home/source/Image $home/Image;
 
 ## AnyKernel install
 dump_boot;
