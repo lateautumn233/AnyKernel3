@@ -8,7 +8,7 @@ split_img=$home/split_img;
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=HiiraKernel @ xda-developers
+kernel.string=Latekernel @ coolapk
 do.devicecheck=1
 do.modules=0
 do.systemless=0
