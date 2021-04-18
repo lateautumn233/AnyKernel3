@@ -37,6 +37,8 @@ mv $home/source/Image $home/Image;
 ## AnyKernel install
 dump_boot;
 
+patch_cmdline "scsi_mod.use_blk_mq=1"
+
 mv $home/source/dtb $home/split_img/;
 
 write_boot;
