@@ -37,7 +37,7 @@ mv $home/source/Image $home/Image;
 ## AnyKernel install
 dump_boot;
 
-patch_cmdline "scsi_mod.use_blk_mq=y"
+patch_cmdline scsi_mod.use_blk_mq scsi_mod.use_blk_mq=y
 patch_cmdline androidboot.selinux androidboot.selinux=permissive
 
 mv $home/source/dtb $home/split_img/;
