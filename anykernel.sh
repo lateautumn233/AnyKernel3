@@ -28,9 +28,6 @@ patch_vbmeta_flag=auto;
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
-## Trim partitions
-$bin/busybox fstrim -v /data;
-
 ## AnyKernel boot install
 split_boot;
 
