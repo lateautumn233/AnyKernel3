@@ -37,9 +37,10 @@ case "$userflavor" in
     *) os="aosp"; os_string="AOSP ROM";;
 esac;
 ui_print " " "You are on $os_string!";
-if [ -f $home/kernels/$os/Image ] && [ -f $home/kernels/$os/dtb ]; then
+if [ -f $home/kernels/$os/Image ] && [ -f $home/kernels/$os/dtb ] && [ -f $home/kernels/$os/dtbo.img ]; then
     mv $home/kernels/$os/Image $home/Image;
     mv $home/kernels/$os/dtb $home/dtb;
+    mv $home/kernels/$os/dtbo.img $home/dtbo.img;
 else
     ui_print " " "There is no kernel for your OS in this zip! Aborting...";
     exit 1;
