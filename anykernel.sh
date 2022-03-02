@@ -29,6 +29,22 @@ no_block_display=1
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
+## Select the correct image to flash
+userflavor="$(file_getprop /system/build.prop "ro.build.flavor")";
+case "$userflavor" in
+    aospa_alioth-user) os="aospa"; os_string="Paranoid Android ROM";;
+    qssi-user) os="miui"; os_string="MIUI ROM";;
+    *) os="aosp"; os_string="AOSP ROM";;
+esac;
+ui_print " " "You are on $os_string!";
+if [ -f $home/kernels/$os/Image ] && [ -f $home/kernels/$os/dtb ]; then
+    mv $home/kernels/$os/Image $home/Image;
+    mv $home/kernels/$os/dtb $home/dtb;
+else
+    ui_print " " "There is no kernel for your OS in this zip! Aborting...";
+    exit 1;
+fi;
+
 ## AnyKernel boot install
 split_boot;
 
