@@ -347,8 +347,8 @@ flash_boot() {
           for fdt in dtb extra kernel_dtb recovery_dtbo; do
             [ -f $fdt ] && $bin/magiskboot dtb $fdt patch;
           done;
-        else
           ui_print "  • Magisk has been preserved.";
+        else
           case $kernel in
             *-dtb) rm -f kernel_dtb;;
           esac;
